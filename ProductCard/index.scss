@@ -1,0 +1,138 @@
+body {
+  background: linear-gradient(to right, #4daf54, #3d8880);
+}
+
+.card {
+  background-color: #272d40;
+  width: 320px;
+  height: 400px;
+  margin: 120px auto;
+  border-radius: 15px;
+  padding: 40px 20px;
+  color: white;
+  position: relative;
+
+  &_icon {
+    font-size: 25px;
+    position: absolute;
+  }
+
+  &_image {
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    img {
+      width: 70%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &_heart {
+    top: 15px;
+    left: 30px;
+  }
+
+  &_cart {
+    top: 15px;
+    right: 30px;
+  }
+
+  &_title {
+    font-size: 24px;
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  &_price {
+    font-size: 26px;
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  &_size,
+  &_color,
+  &_button-group {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &_size {
+    & > span {
+      color: black;
+      border-radius: 5px;
+      padding: 2px 5px;
+      background-color: #dadada;
+      margin: 0 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  &_color {
+    & > span {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    &-green {
+      background-color: green;
+    }
+
+    &-red {
+      background-color: red;
+    }
+
+    &-black {
+      background-color: black;
+    }
+  }
+
+  &_subtext {
+    font-size: 20px;
+  }
+
+  &_button {
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #429f42;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.25s;
+
+    &:hover {
+        transform: scale(0.9);
+    }
+  }
+
+  &:hover {
+    .card_image {
+      transform: translateY(-50px) rotate(-20deg);
+    }
+
+    .card_title,
+    .card_price {
+      transform: translate(-90px, -80px);
+    }
+
+    .card_description {
+      margin-top: -30px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &_description {
+    margin-top: 150px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.4s;
+  }
+}
