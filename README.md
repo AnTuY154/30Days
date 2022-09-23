@@ -2,3 +2,4 @@
 - Day1: ProductCard
 - Day2: Profile Card
 - Day3: Modal Popup
+- Day4: Image Gallery
