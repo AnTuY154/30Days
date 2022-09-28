@@ -4,3 +4,4 @@
 - Day3: Modal Popup
 - Day4: Image Gallery
 - Day5: Search Box
+- Day6: Keydown
