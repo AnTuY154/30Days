@@ -5,3 +5,4 @@
 - Day4: Image Gallery
 - Day5: Search Box
 - Day6: Keydown
+- Day7: Search Tag
