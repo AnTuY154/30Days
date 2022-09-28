@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(40, 151, 209, 1) 0%,
+    rgba(184, 151, 40, 1) 100%,
+    rgba(15, 200, 248, 1) 100%
+  );
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  font-size: 20px;
+  width: 300px;
+
+  &_title {
+    font-weight: bold;
+  }
+
+  &_input {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 10px 0px;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item {
+        margin-right: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #27ad27;
+        color: white;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: 18px;
+
+        & > i {
+          cursor: pointer;
+        }
+      }
+    }
+
+    & > input {
+      // width: 100%;
+      font-size: 15px;
+      margin-top: 5px;
+      border: none;
+      outline: none;
+      flex: 1;
+    }
+  }
+
+  &_button {
+    & > button {
+      color: white;
+      background-color: #27ad27;
+      padding: 6px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:link,
+      &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all 0.2s;
+        position: absolute;
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s;
+      }
+
+      &:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+
+      animation: moveInBottom 5s ease-out;
+      animation-fill-mode: backwards;
+
+      @keyframes moveInBottom {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+}
