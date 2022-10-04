@@ -9,3 +9,4 @@
 - Day8: Validate Form
 - Day9: Weather App
 - Day10: Todo List ( start using react)
+- Day11: Animation
