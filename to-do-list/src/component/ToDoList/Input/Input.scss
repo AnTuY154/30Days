@@ -1,0 +1,23 @@
+.input {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+  padding: 10px 20px;
+
+  & > input,
+  button {
+    border: none;
+    outline: none;
+    font-size: 20px;
+  }
+
+  & > button {
+    background-color: yellowgreen;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
