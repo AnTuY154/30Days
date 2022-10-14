@@ -53,6 +53,7 @@ body {
   border-left: 6px solid orange;
   -webkit-animation: slide_show 2s ease forwards;
           animation: slide_show 2s ease forwards;
+  transition: 0.5s;
 }
 .toast > i {
   font-size: 30px;

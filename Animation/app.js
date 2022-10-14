@@ -14,6 +14,10 @@ function createToast() {
   setTimeout(() => {
     toast.style.animation = "slide_hide 2s ease forwards";
   }, 2000);
+
+  setTimeout(() => {
+    toast.remove()
+  }, 4000);
 }
 
 success.addEventListener("click", createToast);
